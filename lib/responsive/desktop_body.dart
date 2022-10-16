@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_responsive_dashboard/constants.dart';
 
 class DesktopScaffold extends StatelessWidget {
   const DesktopScaffold({Key? key}) : super(key: key);
@@ -6,7 +7,16 @@ class DesktopScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: myDefaultBackground,
+      appBar: myAppBar,
+      body: Row(
+        children: [
+          // open drawer
+          myDrawer,
+
+          // rest of body
+        ],
+      ),
     );
   }
 }
